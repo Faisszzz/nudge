@@ -14,7 +14,7 @@ Kort gezegd:
 
 ## Huidige Intune Context
 
-Uit de Inforcer-export zijn deze macOS policies relevant.
+Uit de Inforcer-export `ITQ-EUC-lab-Documentation.html` zijn deze macOS policies relevant. Deze export staat in dezelfde map als dit document.
 
 ### macOS Software Update Policy
 
