@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Configures Nudge for the ITQ macOS update pilot.</string>
+			<key>PayloadDisplayName</key>
+			<string>Nudge Pilot Configuration</string>
+			<key>PayloadIdentifier</key>
+			<string>com.github.macadmins.Nudge.pilot</string>
+			<key>PayloadOrganization</key>
+			<string>ITQ</string>
+			<key>PayloadType</key>
+			<string>com.github.macadmins.Nudge</string>
+			<key>PayloadUUID</key>
+			<string>93FF5C33-0ECB-423B-B3CE-E23E8235D1B9</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>optionalFeatures</key>
+			<dict>
+				<key>utilizeSOFAFeed</key>
+				<true/>
+				<key>enforceMinorUpdates</key>
+				<true/>
+				<key>attemptToFetchMajorUpgrade</key>
+				<true/>
+				<key>attemptToBlockApplicationLaunches</key>
+				<false/>
+				<key>terminateApplicationsOnLaunch</key>
+				<false/>
+				<key>aggressiveUserExperience</key>
+				<false/>
+				<key>aggressiveUserFullScreenExperience</key>
+				<false/>
+				<key>allowMovableWindowDuringAggressiveUserExperience</key>
+				<true/>
+				<key>honorFocusModes</key>
+				<true/>
+			</dict>
+			<key>osVersionRequirements</key>
+			<array>
+				<dict>
+					<key>requiredMinimumOSVersion</key>
+					<string>latest-supported</string>
+					<key>aboutUpdateURL</key>
+					<string>sofa</string>
+					<key>targetedOSVersionsRule</key>
+					<string>default</string>
+					<key>standardMinorUpdateSLA</key>
+					<integer>3</integer>
+					<key>standardMajorUpgradeSLA</key>
+					<integer>3</integer>
+					<key>nonActivelyExploitedCVEsMinorUpdateSLA</key>
+					<integer>3</integer>
+					<key>nonActivelyExploitedCVEsMajorUpgradeSLA</key>
+					<integer>3</integer>
+					<key>activelyExploitedCVEsMinorUpdateSLA</key>
+					<integer>3</integer>
+					<key>activelyExploitedCVEsMajorUpgradeSLA</key>
+					<integer>3</integer>
+				</dict>
+			</array>
+			<key>userExperience</key>
+			<dict>
+				<key>allowedDeferrals</key>
+				<integer>2</integer>
+				<key>allowedDeferralsUntilForcedSecondaryQuitButton</key>
+				<integer>2</integer>
+				<key>allowLaterDeferralButton</key>
+				<true/>
+				<key>allowUserQuitDeferrals</key>
+				<true/>
+				<key>approachingWindowTime</key>
+				<integer>72</integer>
+				<key>imminentWindowTime</key>
+				<integer>24</integer>
+				<key>initialRefreshCycle</key>
+				<integer>86400</integer>
+				<key>approachingRefreshCycle</key>
+				<integer>86400</integer>
+				<key>imminentRefreshCycle</key>
+				<integer>86400</integer>
+				<key>elapsedRefreshCycle</key>
+				<integer>86400</integer>
+				<key>nudgeRefreshCycle</key>
+				<integer>86400</integer>
+				<key>randomDelay</key>
+				<true/>
+				<key>maxRandomDelayInSeconds</key>
+				<integer>1200</integer>
+			</dict>
+			<key>userInterface</key>
+			<dict>
+				<key>simpleMode</key>
+				<false/>
+				<key>fallbackLanguage</key>
+				<string>en</string>
+				<key>forceFallbackLanguage</key>
+				<false/>
+				<key>showRequiredDate</key>
+				<true/>
+				<key>showRequiredOSVersion</key>
+				<true/>
+				<key>showDeferralCount</key>
+				<true/>
+				<key>singleQuitButton</key>
+				<false/>
+				<key>updateElements</key>
+				<array>
+					<dict>
+						<key>_language</key>
+						<string>en</string>
+						<key>mainHeader</key>
+						<string>Your Mac requires a security update</string>
+						<key>subHeader</key>
+						<string>A reminder from ITQ</string>
+						<key>mainContentHeader</key>
+						<string>Please update before automatic enforcement</string>
+						<key>mainContentSubHeader</key>
+						<string>Your Mac may restart during the update</string>
+						<key>mainContentNote</key>
+						<string>Important</string>
+						<key>mainContentText</key>
+						<string>Your Mac needs the latest supported macOS update to stay secure and compliant.
+
+You can dismiss this reminder during the first two days. On the third day, the update may be installed automatically by your organization through Intune.</string>
+						<key>actionButtonText</key>
+						<string>Update Device</string>
+						<key>informationButtonText</key>
+						<string>More Info</string>
+						<key>primaryQuitButtonText</key>
+						<string>Later</string>
+						<key>secondaryQuitButtonText</key>
+						<string>I understand</string>
+						<key>oneHourDeferralButtonText</key>
+						<string>One Hour</string>
+						<key>oneDayDeferralButtonText</key>
+						<string>One Day</string>
+						<key>customDeferralButtonText</key>
+						<string>Custom</string>
+						<key>customDeferralDropdownText</key>
+						<string>Defer</string>
+						<key>screenShotAltText</key>
+						<string>Screenshot</string>
+					</dict>
+				</array>
+			</dict>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Configures Nudge for the ITQ macOS update pilot.</string>
+	<key>PayloadDisplayName</key>
+	<string>ITQ - Nudge Pilot</string>
+	<key>PayloadIdentifier</key>
+	<string>nl.itq.intune.nudge.pilot</string>
+	<key>PayloadOrganization</key>
+	<string>ITQ</string>
+	<key>PayloadRemovalDisallowed</key>
+	<true/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>F485B2F6-5AA6-40F9-8918-FA700104404B</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

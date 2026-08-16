@@ -1,0 +1,70 @@
+{
+  "optionalFeatures": {
+    "utilizeSOFAFeed": true,
+    "enforceMinorUpdates": true,
+    "attemptToFetchMajorUpgrade": true,
+    "attemptToBlockApplicationLaunches": false,
+    "terminateApplicationsOnLaunch": false,
+    "aggressiveUserExperience": false,
+    "aggressiveUserFullScreenExperience": false,
+    "allowMovableWindowDuringAggressiveUserExperience": true,
+    "honorFocusModes": true
+  },
+  "osVersionRequirements": [
+    {
+      "requiredMinimumOSVersion": "latest-supported",
+      "aboutUpdateURL": "sofa",
+      "targetedOSVersionsRule": "default",
+      "standardMinorUpdateSLA": 3,
+      "standardMajorUpgradeSLA": 3,
+      "nonActivelyExploitedCVEsMinorUpdateSLA": 3,
+      "nonActivelyExploitedCVEsMajorUpgradeSLA": 3,
+      "activelyExploitedCVEsMinorUpdateSLA": 3,
+      "activelyExploitedCVEsMajorUpgradeSLA": 3
+    }
+  ],
+  "userExperience": {
+    "allowedDeferrals": 2,
+    "allowedDeferralsUntilForcedSecondaryQuitButton": 2,
+    "allowLaterDeferralButton": true,
+    "allowUserQuitDeferrals": true,
+    "approachingWindowTime": 72,
+    "imminentWindowTime": 24,
+    "initialRefreshCycle": 86400,
+    "approachingRefreshCycle": 86400,
+    "imminentRefreshCycle": 86400,
+    "elapsedRefreshCycle": 86400,
+    "nudgeRefreshCycle": 86400,
+    "randomDelay": true,
+    "maxRandomDelayInSeconds": 1200
+  },
+  "userInterface": {
+    "simpleMode": false,
+    "fallbackLanguage": "en",
+    "forceFallbackLanguage": false,
+    "showRequiredDate": true,
+    "showRequiredOSVersion": true,
+    "showDeferralCount": true,
+    "singleQuitButton": false,
+    "updateElements": [
+      {
+        "_language": "en",
+        "mainHeader": "Your Mac requires a security update",
+        "subHeader": "A reminder from ITQ",
+        "mainContentHeader": "Please update before automatic enforcement",
+        "mainContentSubHeader": "Your Mac may restart during the update",
+        "mainContentNote": "Important",
+        "mainContentText": "Your Mac needs the latest supported macOS update to stay secure and compliant.\n\nYou can dismiss this reminder during the first two days. On the third day, the update may be installed automatically by your organization through Intune.",
+        "actionButtonText": "Update Device",
+        "informationButtonText": "More Info",
+        "primaryQuitButtonText": "Later",
+        "secondaryQuitButtonText": "I understand",
+        "oneHourDeferralButtonText": "One Hour",
+        "oneDayDeferralButtonText": "One Day",
+        "customDeferralButtonText": "Custom",
+        "customDeferralDropdownText": "Defer",
+        "screenShotAltText": "Screenshot"
+      }
+    ]
+  }
+}
