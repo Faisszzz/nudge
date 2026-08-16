@@ -96,3 +96,6 @@ NudgePkgLA/
 NudgePkgLogger/
 build_info.txt
 date_info.txt
+
+# Local Intune/Nudge VM test backups
+Intune/Nudge/vm-backup/
