@@ -126,7 +126,7 @@
 						<key>mainContentText</key>
 						<string>Your Mac needs the latest supported macOS update to stay secure and compliant.
 
-You can dismiss this reminder during the first two days. On the third day, the update may be installed automatically by your organization through Intune.</string>
+Please install this update as soon as possible. You can temporarily dismiss this reminder. After the permitted update period, the update may be installed automatically by your organization through Intune.</string>
 						<key>actionButtonText</key>
 						<string>Update Device</string>
 						<key>informationButtonText</key>

@@ -100,8 +100,8 @@ Reden:
 
 - Geen applicaties blokkeren tijdens de eerste pilot.
 - Geen applicaties afsluiten tijdens de eerste pilot.
-- Wel duidelijke communicatie richting gebruiker op dag 1 en dag 2.
-- Geen aggressive mode, omdat Intune op dag 3 al de enforcement uitvoert.
+- Wel duidelijke communicatie richting de gebruiker, met maximaal twee deferrals.
+- Geen aggressive mode, omdat Intune/DDM de afzonderlijke update-enforcement uitvoert.
 - Intune/DDM blijft de echte update enforcement uitvoeren.
 
 ## Pilotbestanden
@@ -254,7 +254,7 @@ Dit is het gewenste pilotgedrag.
 
 De huidige Intune policy dwingt de nieuwste update af na 3 dagen.
 
-Daarom gebruikt Nudge ook een 3-dagen lijn voor de SOFA/SLA-bepaling:
+Daarom gebruikt Nudge ook een termijn van 3 dagen voor de SOFA/SLA-bepaling:
 
 ```json
 "standardMinorUpdateSLA": 3,
@@ -265,9 +265,9 @@ Daarom gebruikt Nudge ook een 3-dagen lijn voor de SOFA/SLA-bepaling:
 "activelyExploitedCVEsMajorUpgradeSLA": 3
 ```
 
-Hierdoor zegt Nudge niet iets anders dan Intune doet. De gebruiker krijgt dus geen melding zoals "je hebt 7 dagen" terwijl Intune na 3 dagen al afdwingt.
+Hierdoor zijn de beoogde termijnen op elkaar afgestemd. De gebruiker krijgt dus geen Nudge-termijn van bijvoorbeeld 7 dagen terwijl Intune een termijn van 3 dagen hanteert.
 
-De Nudge pilot is daarnaast ingericht als dag-1/dag-2 reminder:
+De Nudge pilot is daarnaast ingericht met maximaal twee deferrals en dagelijkse refreshcycli:
 
 ```json
 "allowedDeferrals": 2,
@@ -279,13 +279,15 @@ De Nudge pilot is daarnaast ingericht als dag-1/dag-2 reminder:
 "nudgeRefreshCycle": 86400
 ```
 
-Waarom:
+Dit betekent niet gegarandeerd dat de gebruiker exact op dag 1 en dag 2 een venster ziet. Een deferral is een keer wegklikken; de timing hangt daarnaast af van de LaunchAgent, random delay, device-uptime en synchronisatie.
 
-- Dag 1: gebruiker krijgt een Nudge venster en kan dit wegklikken.
-- Dag 2: gebruiker krijgt opnieuw een Nudge venster en kan dit wegklikken.
-- Dag 3: Intune/DDM forceert de update volgens de bestaande update policy.
+De deadlines zijn ook niet technisch aan elkaar gekoppeld:
 
-Nudge is dus bewust niet ingericht als derde enforcement-laag. De derde dag hoort bij Intune/DDM.
+- Nudge berekent de deadline vanuit de SOFA-publicatiedatum plus de ingestelde SLA.
+- Intune/DDM gebruikt Apples updatebeschikbaarheid en de eigen policytermijn.
+- Door gefaseerde beschikbaarheid, caching, offline devices of een latere policiesync kunnen de momenten verschillen.
+
+Nudge is daarom bewust niet ingericht als extra enforcement-laag en belooft niet dat Intune exact op de door Nudge getoonde datum afdwingt. Intune/DDM blijft verantwoordelijk voor de daadwerkelijke update-enforcement.
 
 ## Wat Nudge Niet Doet In Deze Pilot
 
@@ -353,4 +355,4 @@ De bestaande Intune macOS update policy blijft dan gewoon actief.
 
 ## WhatsApp Samenvatting
 
-Nudge vervangt Intune/DDM niet. Intune blijft de update downloaden/installeren en afdwingen na 3 dagen om 12:30. We schakelen de standaard System Settings update-notificatie uit, zodat Nudge de communicatie overneemt. Nudge toont dag 1 en dag 2 een wegklikbare reminder; dag 3 is Intune enforcement.
+Nudge vervangt Intune/DDM niet. Intune blijft de update downloaden/installeren en hanteert een eigen termijn van 3 dagen met installatietijd om 12:30. We schakelen de standaard System Settings update-notificatie uit, zodat Nudge de communicatie overneemt. Nudge gebruikt via SOFA eveneens een termijn van 3 dagen en staat maximaal twee deferrals toe, maar beide deadlines zijn niet technisch gesynchroniseerd. Intune/DDM blijft de enforcement uitvoeren.
