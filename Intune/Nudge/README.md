@@ -116,6 +116,20 @@ De bestanden zijn gesplitst per gebruiksscenario:
 
 Gebruik voor Intune alleen de bestanden in `managed-device/`. Gebruik `vm-local-test/` alleen wanneer je Nudge lokaal of op een losse VM wilt starten zonder Intune-profielupload.
 
+## Actuele UI-Variant
+
+De managed-device en VM-local-test configuraties gebruiken dezelfde vriendelijke pilottekst:
+
+```text
+Your Mac has an update waiting
+A friendly heads-up from ITQ
+Pick a good moment to update
+Update Now
+Remind Me
+```
+
+De linker statuskolom toont wel `Required OS Version`, `Current OS Version`, `Days Remaining To Update` en `Deferred Count`, maar geen aparte required-date regel.
+
 ## Aanbevolen Intune Structuur
 
 Maak Nudge los van de bestaande baseline aan. Voeg Nudge niet direct toe aan een algemene security baseline.

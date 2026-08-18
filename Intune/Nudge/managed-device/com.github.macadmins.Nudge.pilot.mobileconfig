@@ -101,8 +101,10 @@
 				<key>forceFallbackLanguage</key>
 				<false/>
 				<key>showRequiredDate</key>
-				<true/>
+				<false/>
 				<key>showRequiredOSVersion</key>
+				<true/>
+				<key>showDaysRemainingToUpdate</key>
 				<true/>
 				<key>showDeferralCount</key>
 				<true/>
@@ -114,25 +116,25 @@
 						<key>_language</key>
 						<string>en</string>
 						<key>mainHeader</key>
-						<string>Your Mac requires a security update</string>
+						<string>Your Mac has an update waiting</string>
 						<key>subHeader</key>
-						<string>A reminder from ITQ</string>
+						<string>A friendly heads-up from ITQ</string>
 						<key>mainContentHeader</key>
-						<string>Please update before automatic enforcement</string>
+						<string>Pick a good moment to update</string>
 						<key>mainContentSubHeader</key>
-						<string>Your Mac may restart during the update</string>
+						<string>Save your work first - your Mac may need to restart</string>
 						<key>mainContentNote</key>
-						<string>Important</string>
+						<string>Why update now?</string>
 						<key>mainContentText</key>
-						<string>Your Mac needs the latest supported macOS update to stay secure and compliant.
+						<string>A quick update keeps your Mac secure, stable and ready for work. You can install it yourself now from Software Update.
 
-You can dismiss this reminder during the pilot deferral period. The update may still be installed automatically by your organization through Intune.</string>
+Not a good moment? No problem - ask us to remind you later. If the update is still pending, ITQ's organization policy may install it automatically. Nudge only keeps you informed and never installs the update itself.</string>
 						<key>actionButtonText</key>
-						<string>Update Device</string>
+						<string>Update Now</string>
 						<key>informationButtonText</key>
-						<string>More Info</string>
+						<string>What's New?</string>
 						<key>primaryQuitButtonText</key>
-						<string>Later</string>
+						<string>Remind Me</string>
 						<key>secondaryQuitButtonText</key>
 						<string>I understand</string>
 						<key>oneHourDeferralButtonText</key>
@@ -142,7 +144,7 @@ You can dismiss this reminder during the pilot deferral period. The update may s
 						<key>customDeferralButtonText</key>
 						<string>Custom</string>
 						<key>customDeferralDropdownText</key>
-						<string>Defer</string>
+						<string>Remind Me</string>
 						<key>screenShotAltText</key>
 						<string>Screenshot</string>
 					</dict>
