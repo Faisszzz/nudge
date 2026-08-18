@@ -8,7 +8,7 @@ Gebruik deze map voor Intune-upload naar managed macOS devices.
 | --- | --- |
 | `com.github.macadmins.Nudge.pilot.mobileconfig` | Nudge configuratieprofiel voor de macOS update pilot |
 | `com.github.macadmins.Nudge.notifications.mobileconfig` | Notification profiel waarmee Nudge meldingen mag tonen |
-| `install-nudge-logo-itq.sh` | Intune shell script dat het ITQ-logo downloadt naar het pad dat Nudge gebruikt |
+| `install-nudge-logo-itq.zsh` | Optioneel Intune shell script om het ITQ-logo lokaal te downloaden |
 
 ## Intune
 
@@ -19,7 +19,9 @@ Maak twee aparte macOS Custom configuration profiles:
 
 Assign beide profielen alleen aan de Nudge pilotgroep.
 
-Maak daarnaast een macOS shell script in Intune voor `install-nudge-logo-itq.sh`:
+De Nudge-config gebruikt standaard de HTTPS-logo URL direct. Het script `install-nudge-logo-itq.zsh` is daarom alleen nodig als je later bewust naar een lokaal logo-pad wilt overstappen.
+
+Maak alleen dan een macOS shell script in Intune voor `install-nudge-logo-itq.zsh`:
 
 - Run script as signed-in user: `No`
 - Hide script notifications on devices: `Yes`

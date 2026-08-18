@@ -101,9 +101,9 @@
 				<key>forceFallbackLanguage</key>
 				<false/>
 				<key>iconLightPath</key>
-				<string>/Library/Application Support/ITQ/Nudge/nudge-logo-itq.png</string>
+				<string>https://companybrandingmsp.blob.core.windows.net/branding/ITQ/Nudge-Logo-ITQ.png</string>
 				<key>iconDarkPath</key>
-				<string>/Library/Application Support/ITQ/Nudge/nudge-logo-itq.png</string>
+				<string>https://companybrandingmsp.blob.core.windows.net/branding/ITQ/Nudge-Logo-ITQ.png</string>
 				<key>showRequiredDate</key>
 				<false/>
 				<key>showRequiredOSVersion</key>
