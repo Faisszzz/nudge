@@ -42,6 +42,8 @@
     "simpleMode": false,
     "fallbackLanguage": "en",
     "forceFallbackLanguage": false,
+    "iconLightPath": "/Library/Application Support/ITQ/Nudge/itq-logo.png",
+    "iconDarkPath": "/Library/Application Support/ITQ/Nudge/itq-logo.png",
     "showRequiredDate": false,
     "showRequiredOSVersion": true,
     "showDaysRemainingToUpdate": true,
