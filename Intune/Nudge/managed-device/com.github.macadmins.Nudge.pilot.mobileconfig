@@ -113,7 +113,7 @@
 				<key>showDeferralCount</key>
 				<true/>
 				<key>singleQuitButton</key>
-				<false/>
+				<true/>
 				<key>updateElements</key>
 				<array>
 					<dict>
@@ -139,8 +139,6 @@ Not a good moment? No problem - ask us to remind you later. If the update is sti
 						<string>What's New?</string>
 						<key>primaryQuitButtonText</key>
 						<string>Remind Me</string>
-						<key>secondaryQuitButtonText</key>
-						<string>I understand</string>
 						<key>oneHourDeferralButtonText</key>
 						<string>One Hour</string>
 						<key>oneDayDeferralButtonText</key>

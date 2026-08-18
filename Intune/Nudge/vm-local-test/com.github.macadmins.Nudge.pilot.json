@@ -48,7 +48,7 @@
     "showRequiredOSVersion": true,
     "showDaysRemainingToUpdate": true,
     "showDeferralCount": true,
-    "singleQuitButton": false,
+    "singleQuitButton": true,
     "updateElements": [
       {
         "_language": "en",
@@ -61,7 +61,6 @@
         "actionButtonText": "Update Now",
         "informationButtonText": "What's New?",
         "primaryQuitButtonText": "Remind Me",
-        "secondaryQuitButtonText": "I understand",
         "oneHourDeferralButtonText": "One Hour",
         "oneDayDeferralButtonText": "One Day",
         "customDeferralButtonText": "Custom",
