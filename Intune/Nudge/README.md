@@ -106,13 +106,15 @@ Reden:
 
 ## Pilotbestanden
 
-De volgende bestanden staan klaar in deze map:
+De bestanden zijn gesplitst per gebruiksscenario:
 
 | Bestand | Doel |
 | --- | --- |
-| `com.github.macadmins.Nudge.pilot.json` | Leesbare JSON-versie van de pilotconfig |
-| `com.github.macadmins.Nudge.pilot.mobileconfig` | Uploadbaar Intune Custom profile voor Nudge |
-| `com.github.macadmins.Nudge.notifications.mobileconfig` | Uploadbaar notification profile voor Nudge meldingen |
+| `managed-device/com.github.macadmins.Nudge.pilot.mobileconfig` | Uploadbaar Intune Custom profile voor managed Macs |
+| `managed-device/com.github.macadmins.Nudge.notifications.mobileconfig` | Uploadbaar Intune Custom profile voor Nudge meldingen op managed Macs |
+| `vm-local-test/com.github.macadmins.Nudge.pilot.json` | Leesbare JSON-versie voor lokaal testen op een VM |
+
+Gebruik voor Intune alleen de bestanden in `managed-device/`. Gebruik `vm-local-test/` alleen wanneer je Nudge lokaal of op een losse VM wilt starten zonder Intune-profielupload.
 
 ## Aanbevolen Intune Structuur
 
@@ -157,7 +159,7 @@ Verwachte uitkomst:
 
 Upload dit bestand in Intune als macOS Custom profile:
 
-`com.github.macadmins.Nudge.pilot.mobileconfig`
+`managed-device/com.github.macadmins.Nudge.pilot.mobileconfig`
 
 Aanbevolen assignment:
 
@@ -175,7 +177,7 @@ Waarom:
 
 Upload dit bestand als apart macOS Custom profile:
 
-`com.github.macadmins.Nudge.notifications.mobileconfig`
+`managed-device/com.github.macadmins.Nudge.notifications.mobileconfig`
 
 Dit profiel staat meldingen toe voor:
 
@@ -267,11 +269,11 @@ Daarom gebruikt Nudge ook een 3-dagen lijn voor de SOFA/SLA-bepaling:
 
 Hierdoor zegt Nudge niet iets anders dan Intune doet. De gebruiker krijgt dus geen melding zoals "je hebt 7 dagen" terwijl Intune na 3 dagen al afdwingt.
 
-De Nudge pilot is daarnaast ingericht als dag-1/dag-2 reminder:
+De Nudge pilot is daarnaast ingericht als zachte reminder met 15 gebruikers-deferrals:
 
 ```json
-"allowedDeferrals": 2,
-"allowedDeferralsUntilForcedSecondaryQuitButton": 2,
+"allowedDeferrals": 15,
+"allowedDeferralsUntilForcedSecondaryQuitButton": 15,
 "initialRefreshCycle": 86400,
 "approachingRefreshCycle": 86400,
 "imminentRefreshCycle": 86400,
@@ -281,11 +283,11 @@ De Nudge pilot is daarnaast ingericht als dag-1/dag-2 reminder:
 
 Waarom:
 
-- Dag 1: gebruiker krijgt een Nudge venster en kan dit wegklikken.
-- Dag 2: gebruiker krijgt opnieuw een Nudge venster en kan dit wegklikken.
-- Dag 3: Intune/DDM forceert de update volgens de bestaande update policy.
+- Gebruiker kan de Nudge reminder meerdere keren uitstellen tijdens de pilot.
+- De pilot blijft vriendelijk en meetbaar zonder dat Nudge zelf hard gaat afdwingen.
+- Intune/DDM blijft los daarvan de update afdwingen volgens de bestaande update policy.
 
-Nudge is dus bewust niet ingericht als derde enforcement-laag. De derde dag hoort bij Intune/DDM.
+Nudge is dus bewust niet ingericht als extra enforcement-laag. De technische enforcement blijft bij Intune/DDM.
 
 ## Wat Nudge Niet Doet In Deze Pilot
 
@@ -343,8 +345,8 @@ De bestaande Intune macOS update policy blijft dan gewoon actief.
 2. Test lokaal op VM met `latest-supported`.
 3. Upload Nudge app naar Intune.
 4. Pas de bestaande Software Update/App Store notification policy aan zodat `Disable Software Update Notifications` op `True` staat voor de pilotgroep.
-5. Upload Nudge pilot mobileconfig.
-6. Upload Nudge notification mobileconfig.
+5. Upload `managed-device/com.github.macadmins.Nudge.pilot.mobileconfig`.
+6. Upload `managed-device/com.github.macadmins.Nudge.notifications.mobileconfig`.
 7. Assign alles aan een kleine managed pilotgroep.
 8. Controleer profile delivery en logs.
 9. Test met een device dat up-to-date is.

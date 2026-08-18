@@ -66,9 +66,9 @@
 			<key>userExperience</key>
 			<dict>
 				<key>allowedDeferrals</key>
-				<integer>2</integer>
+				<integer>15</integer>
 				<key>allowedDeferralsUntilForcedSecondaryQuitButton</key>
-				<integer>2</integer>
+				<integer>15</integer>
 				<key>allowLaterDeferralButton</key>
 				<true/>
 				<key>allowUserQuitDeferrals</key>
@@ -126,7 +126,7 @@
 						<key>mainContentText</key>
 						<string>Your Mac needs the latest supported macOS update to stay secure and compliant.
 
-You can dismiss this reminder during the first two days. On the third day, the update may be installed automatically by your organization through Intune.</string>
+You can dismiss this reminder during the pilot deferral period. The update may still be installed automatically by your organization through Intune.</string>
 						<key>actionButtonText</key>
 						<string>Update Device</string>
 						<key>informationButtonText</key>
