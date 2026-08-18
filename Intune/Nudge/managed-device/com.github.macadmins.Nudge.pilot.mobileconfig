@@ -101,9 +101,9 @@
 				<key>forceFallbackLanguage</key>
 				<false/>
 				<key>iconLightPath</key>
-				<string>/Library/Application Support/ITQ/Nudge/itq-logo.png</string>
+				<string>/Library/Application Support/ITQ/Nudge/nudge-logo-itq.png</string>
 				<key>iconDarkPath</key>
-				<string>/Library/Application Support/ITQ/Nudge/itq-logo.png</string>
+				<string>/Library/Application Support/ITQ/Nudge/nudge-logo-itq.png</string>
 				<key>showRequiredDate</key>
 				<false/>
 				<key>showRequiredOSVersion</key>
