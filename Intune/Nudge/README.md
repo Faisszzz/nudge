@@ -125,7 +125,7 @@ Your Mac has an update waiting
 A friendly heads-up from ITQ
 Pick a good moment to update
 Update Now
-Remind Me
+Remind Me Later
 ```
 
 De linker statuskolom toont wel `Required OS Version`, `Current OS Version`, `Days Remaining To Update` en `Deferred Count`, maar geen aparte required-date regel.

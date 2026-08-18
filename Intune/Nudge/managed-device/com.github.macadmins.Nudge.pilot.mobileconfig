@@ -70,7 +70,7 @@
 				<key>allowedDeferralsUntilForcedSecondaryQuitButton</key>
 				<integer>15</integer>
 				<key>allowLaterDeferralButton</key>
-				<true/>
+				<false/>
 				<key>allowUserQuitDeferrals</key>
 				<true/>
 				<key>approachingWindowTime</key>
@@ -138,15 +138,15 @@ Not a good moment? No problem - ask us to remind you later. If the update is sti
 						<key>informationButtonText</key>
 						<string>What's New?</string>
 						<key>primaryQuitButtonText</key>
-						<string>Remind Me</string>
+						<string>Remind Me Later</string>
 						<key>oneHourDeferralButtonText</key>
-						<string>One Hour</string>
+						<string>1 Hour</string>
 						<key>oneDayDeferralButtonText</key>
-						<string>One Day</string>
+						<string>1 Day</string>
 						<key>customDeferralButtonText</key>
 						<string>Custom</string>
 						<key>customDeferralDropdownText</key>
-						<string>Remind Me</string>
+						<string>Remind Me In…</string>
 						<key>screenShotAltText</key>
 						<string>Screenshot</string>
 					</dict>

@@ -1,0 +1,49 @@
+{
+  "optionalFeatures": {
+    "utilizeSOFAFeed": true,
+    "enforceMinorUpdates": true,
+    "attemptToFetchMajorUpgrade": true,
+    "attemptToBlockApplicationLaunches": false,
+    "terminateApplicationsOnLaunch": false
+  },
+  "osVersionRequirements": [
+    {
+      "requiredInstallationDate": "2026-08-16T00:00:00Z",
+      "requiredMinimumOSVersion": "latest-supported"
+    }
+  ],
+  "userExperience": {
+    "randomDelay": false,
+    "initialRefreshCycle": 10,
+    "approachingRefreshCycle": 10,
+    "imminentRefreshCycle": 10,
+    "elapsedRefreshCycle": 10,
+    "nudgeRefreshCycle": 5
+  },
+  "userInterface": {
+    "simpleMode": false,
+    "showRequiredDate": true,
+    "showRequiredOSVersion": true,
+    "showDeferralCount": true,
+    "updateElements": [
+      {
+        "_language": "en",
+        "mainHeader": "Your device requires a security update",
+        "subHeader": "Test from ITQ",
+        "mainContentHeader": "This is a Nudge test",
+        "mainContentSubHeader": "No real update will be installed from this test",
+        "mainContentText": "This test confirms that Nudge launches and reads the configuration.",
+        "mainContentNote": "Test only",
+        "actionButtonText": "Update Device",
+        "informationButtonText": "More Info",
+        "primaryQuitButtonText": "Later",
+        "secondaryQuitButtonText": "I understand",
+        "oneHourDeferralButtonText": "One Hour",
+        "oneDayDeferralButtonText": "One Day",
+        "customDeferralButtonText": "Custom",
+        "customDeferralDropdownText": "Defer",
+        "screenShotAltText": "Screenshot"
+      }
+    ]
+  }
+}
